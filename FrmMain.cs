@@ -12,7 +12,7 @@ namespace FastReportDemo
         {
             InitializeComponent();
             FastReport.Report report = new FastReport.Report();
-            string fileName = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "steelorder.frx");
+            string fileName = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ReportTemplate"), "steelorder.frx");
             report.Load(fileName);
             report.Page.Height = 1000;
             report.ShowPrepared();
@@ -20,7 +20,7 @@ namespace FastReportDemo
 
         internal void PrintOrder(OrderInfo order, bool preview = false)
         {
-            string fileName = Path.Combine(Environment.CurrentDirectory, "steelorder.frx");
+            string fileName = Path.Combine(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "ReportTemplate"), "steelorder.frx");
             FastReport.Report report = new FastReport.Report();
             report.Load(fileName);
             report.SetParameterValue("orderno", order.orderno);
