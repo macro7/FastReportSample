@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/25/2018 19:01:29" ReportInfo.Modified="12/09/2018 00:39:16" ReportInfo.CreatorVersion="2013.2.5.0">
+  <Dictionary>
+    <Parameter Name="orderno" DataType="System.Int32" Expression="1808250001"/>
+    <Parameter Name="customer" DataType="System.String"/>
+    <Parameter Name="phone" DataType="System.String"/>
+    <Parameter Name="orderid" DataType="System.String"/>
+    <Parameter Name="orderdate" DataType="System.String"/>
+    <Parameter Name="addr" DataType="System.String"/>
+    <Parameter Name="bz" DataType="System.String"/>
+    <Parameter Name="detailno1" DataType="System.String"/>
+    <Parameter Name="detailno2" DataType="System.String"/>
+    <Parameter Name="detailno3" DataType="System.String"/>
+    <Parameter Name="detailno5" DataType="System.String"/>
+    <Parameter Name="detailno4" DataType="System.String"/>
+    <Parameter Name="sumnumber" DataType="System.String"/>
+    <Parameter Name="sumacreage" DataType="System.String"/>
+    <Parameter Name="summoney" DataType="System.String"/>
+    <Parameter Name="operation" DataType="System.String"/>
+    <Parameter Name="lxdh" DataType="System.String"/>
+    <Parameter Name="lxdz" DataType="System.String"/>
+    <Parameter Name="guage1" DataType="System.String"/>
+    <Parameter Name="guage2" DataType="System.String"/>
+    <Parameter Name="guage3" DataType="System.String"/>
+    <Parameter Name="guage4" DataType="System.String"/>
+    <Parameter Name="guage5" DataType="System.String"/>
+    <Parameter Name="number1" DataType="System.String"/>
+    <Parameter Name="number2" DataType="System.String"/>
+    <Parameter Name="number3" DataType="System.String"/>
+    <Parameter Name="number4" DataType="System.String"/>
+    <Parameter Name="number5" DataType="System.String"/>
+    <Parameter Name="acreage1" DataType="System.String"/>
+    <Parameter Name="acreage2" DataType="System.String"/>
+    <Parameter Name="acreage3" DataType="System.String"/>
+    <Parameter Name="acreage4" DataType="System.String"/>
+    <Parameter Name="acreage5" DataType="System.String"/>
+    <Parameter Name="price1" DataType="System.String"/>
+    <Parameter Name="price2" DataType="System.String"/>
+    <Parameter Name="price3" DataType="System.String"/>
+    <Parameter Name="price4" DataType="System.String"/>
+    <Parameter Name="price5" DataType="System.String"/>
+    <Parameter Name="money1" DataType="System.String"/>
+    <Parameter Name="money2" DataType="System.String"/>
+    <Parameter Name="money3" DataType="System.String"/>
+    <Parameter Name="money4" DataType="System.String"/>
+    <Parameter Name="money5" DataType="System.String"/>
+    <Parameter Name="note1" DataType="System.String"/>
+    <Parameter Name="note2" DataType="System.String"/>
+    <Parameter Name="note3" DataType="System.String"/>
+    <Parameter Name="note4" DataType="System.String"/>
+    <Parameter Name="note5" DataType="System.String"/>
+    <Parameter Name="sign" DataType="System.String"/>
+    <Parameter Name="dxje" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="221" PaperHeight="139.7">
+    <ReportTitleBand Name="ReportTitle1" Width="759.78" Height="49.14">
+      <TextObject Name="Text1" Top="7.56" Width="793.8" Height="41.58" Text="醴特钢化玻璃有限公司" HorzAlign="Center" VertAlign="Center" Font="宋体, 26.25pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="53.14" Width="759.78" Height="408.24">
+      <TextObject Name="Text2" Width="245.7" Height="18.9" Text="客户：    [customer]" Font="宋体, 12pt"/>
+      <TextObject Name="Text3" Left="198.45" Width="274.05" Height="18.9" Text="联系电话：    [phone]" Font="宋体, 12pt"/>
+      <TextObject Name="Text4" Left="500.85" Width="245.7" Height="18.9" Text="日期：   [orderdate]" Font="宋体, 13pt"/>
+      <TextObject Name="Text5" Top="28.35" Width="198.45" Height="28.35" Text="订单号：    [orderid]" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text6" Left="198.45" Top="28.35" Width="226.8" Height="28.35" Text="发货单号： [orderno]" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text7" Left="425.25" Top="28.35" Width="330.75" Height="28.35" Text="地址： [addr]" VertAlign="Center" Font="宋体, 11pt"/>
+      <TextObject Name="Text9" Left="727.65" Top="66.15" Width="28.35" Height="255.15" Text="1&#13;&#10;存&#13;&#10;根&#13;&#10;︵&#13;&#10;白&#13;&#10;︶&#13;&#10;2&#13;&#10;发&#13;&#10;货&#13;&#10;︵&#13;&#10;红&#13;&#10;︶&#13;&#10;3&#13;&#10;客&#13;&#10;户&#13;&#10;︵&#13;&#10;黄&#13;&#10;︶&#13;&#10;" Font="宋体, 9pt"/>
+      <TableObject Name="Table1" Top="56.7" Width="726.88" Height="312" Border.Lines="All">
+        <TableColumn Name="Column1" Width="41.67"/>
+        <TableColumn Name="Column2" Width="166.05"/>
+        <TableColumn Name="Column3" Width="71.55"/>
+        <TableColumn Name="Column4" Width="109.35"/>
+        <TableColumn Name="Column5" Width="118.8"/>
+        <TableColumn Name="Column6" Width="99.9"/>
+        <TableColumn Name="Column7" Width="119.56"/>
+        <TableRow Name="Row1" Height="31.2">
+          <TableCell Name="Cell1" Border.Lines="All" Text="序号" Padding="0, 5, 0, 0" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell2" Border.Lines="All" Text="规格" Padding="2, 5, 2, 1" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell3" Border.Lines="All" Text="片数" Padding="2, 5, 2, 1" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell4" Border.Lines="All" Text="面积（㎡）" Padding="2, 5, 2, 1" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell5" Border.Lines="All" Text="单价（元）" Padding="2, 5, 2, 1" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell51" Border.Lines="All" Text="金额（元）" Padding="2, 5, 2, 1" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell52" Border.Lines="All" Text="备注" Padding="2, 5, 2, 1" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row2" Height="31.2">
+          <TableCell Name="Cell6" Border.Lines="All" Text="[detailno1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell7" Border.Lines="All" Text="[guage1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell8" Border.Lines="All" Text="[number1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell9" Border.Lines="All" Text="[acreage1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell10" Border.Lines="All" Text="[price1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell53" Border.Lines="All" Text="[money1]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell54" Border.Lines="All" Text="[note1]" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row3" Height="31.2">
+          <TableCell Name="Cell11" Border.Lines="All" Text="[detailno2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell12" Border.Lines="All" Text="[guage2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell13" Border.Lines="All" Text="[number2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell14" Border.Lines="All" Text="[acreage2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell15" Border.Lines="All" Text="[price2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell55" Border.Lines="All" Text="[money2]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell56" Border.Lines="All" Text="[note2]" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row4" Height="31.2">
+          <TableCell Name="Cell16" Border.Lines="All" Text="[detailno3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell17" Border.Lines="All" Text="[guage3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell18" Border.Lines="All" Text="[number3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell19" Border.Lines="All" Text="[acreage3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell20" Border.Lines="All" Text="[price3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell57" Border.Lines="All" Text="[money3]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell58" Border.Lines="All" Text="[note3]" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row5" Height="31.2">
+          <TableCell Name="Cell21" Border.Lines="All" Text="[detailno4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell22" Border.Lines="All" Text="[guage4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell23" Border.Lines="All" Text="[number4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell24" Border.Lines="All" Text="[acreage4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell25" Border.Lines="All" Text="[price4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell59" Border.Lines="All" Text="[money4]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell60" Border.Lines="All" Text="[note4]" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row6" Height="31.2">
+          <TableCell Name="Cell26" Border.Lines="All" Text="[detailno5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell27" Border.Lines="All" Text="[guage5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell28" Border.Lines="All" Text="[number5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell29" Border.Lines="All" Text="[acreage5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell30" Border.Lines="All" Text="[price5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell61" Border.Lines="All" Text="[money5]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell62" Border.Lines="All" Text="[note5]" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row7" Height="31.2">
+          <TableCell Name="Cell31" Border.Lines="All" Text="合计" HorzAlign="Center" VertAlign="Center" Font="宋体, 15pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell71" Font="宋体, 9pt"/>
+          <TableCell Name="Cell33" Border.Lines="All" Text="[sumnumber]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell34" Border.Lines="All" Text="[sumacreage]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell35" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell63" Border.Lines="All" Text="[summoney]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell64" Border.Lines="All" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+        </TableRow>
+        <TableRow Name="Row8" Height="31.2">
+          <TableCell Name="Cell36" Border.Lines="All" Text="大写金额（人民币）" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt, style=Bold" ColSpan="2"/>
+          <TableCell Name="Cell72" Font="宋体, 9pt"/>
+          <TableCell Name="Cell38" Border.Lines="Left, Top, Bottom" Text="[dxje]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt, style=Bold" ColSpan="5"/>
+          <TableCell Name="Cell87" Font="宋体, 9pt"/>
+          <TableCell Name="Cell88" Font="宋体, 9pt"/>
+          <TableCell Name="Cell89" Font="宋体, 9pt"/>
+          <TableCell Name="Cell90" Font="宋体, 9pt"/>
+        </TableRow>
+        <TableRow Name="Row9" Height="31.2">
+          <TableCell Name="Cell41" Border.Lines="All" Text="发货人：" HorzAlign="Justify" VertAlign="Center" Font="宋体, 13pt" ColSpan="2"/>
+          <TableCell Name="Cell91" Font="宋体, 9pt"/>
+          <TableCell Name="Cell43" Border.Lines="All" Text="[operation]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt" ColSpan="2"/>
+          <TableCell Name="Cell92" Font="宋体, 9pt"/>
+          <TableCell Name="Cell45" Border.Lines="All" Text="客户签名：" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt"/>
+          <TableCell Name="Cell67" Border.Lines="All" Text="[sign]" HorzAlign="Center" VertAlign="Center" Font="宋体, 13pt" ColSpan="2"/>
+          <TableCell Name="Cell98" Font="宋体, 9pt"/>
+        </TableRow>
+        <TableRow Name="Row10" Height="31.2">
+          <TableCell Name="Cell46" Border.Lines="All" Text="电话：[lxdh]" VertAlign="Center" Font="宋体, 13pt" ColSpan="2"/>
+          <TableCell Name="Cell93" Font="宋体, 9pt"/>
+          <TableCell Name="Cell48" Border.Lines="All" Text="地址：[lxdz]" VertAlign="Center" Font="宋体, 13pt" ColSpan="5"/>
+          <TableCell Name="Cell94" Font="宋体, 9pt"/>
+          <TableCell Name="Cell95" Font="宋体, 9pt"/>
+          <TableCell Name="Cell96" Font="宋体, 9pt"/>
+          <TableCell Name="Cell97" Font="宋体, 9pt"/>
+        </TableRow>
+      </TableObject>
+      <TextObject Name="Text8" Top="378" Width="793.8" Height="30.24" Text="[bz]" Font="宋体, 12pt"/>
+    </PageHeaderBand>
+  </ReportPage>
+</Report>

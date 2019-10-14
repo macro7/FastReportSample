@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="06/19/2019 11:13:32" ReportInfo.Modified="10/12/2019 22:55:02" ReportInfo.CreatorVersion="2013.2.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {        float txtHeight=0;
+    private void Page1_FinishPage(object sender, EventArgs e)
+    {
+      Page1.PaperHeight = (Convert.ToSingle(PageHeader1.Height/37.8) 
+        + Convert.ToSingle(DataHeader1.Height/37.8)
+        + txtHeight + 
+        Convert.ToSingle(DataFooter1.Height/37.8) +
+        Convert.ToSingle(PageFooter1.Height/37.8));            
+
+    }
+
+    private void Text15_AfterData(object sender, EventArgs e)
+    {
+               txtHeight+= 5;
+    }
+  }
+}
+</ScriptText>
+  <Dictionary>
+    <TableDataSource Name="list" ReferenceName="list" DataType="System.String" Enabled="true">
+      <Column Name="str1" DataType="System.String"/>
+      <Column Name="str2" DataType="System.String"/>
+      <Column Name="str3" DataType="System.String"/>
+      <Column Name="str4" DataType="System.String"/>
+    </TableDataSource>
+    <Parameter Name="patientName" DataType="System.String"/>
+    <Parameter Name="cardNum" DataType="System.String"/>
+    <Parameter Name="seeDoctoeNumber" DataType="System.String"/>
+    <Parameter Name="heji" DataType="System.String"/>
+    <Parameter Name="pa" DataType="System.String"/>
+    <Parameter Name="relPay" DataType="System.String"/>
+    <Parameter Name="payType" DataType="System.String"/>
+    <Parameter Name="userDataName" DataType="System.String"/>
+    <Parameter Name="phone" DataType="System.String"/>
+    <Parameter Name="company" DataType="System.String"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="58" PaperHeight="160" LeftMargin="0" TopMargin="0" RightMargin="0" BottomMargin="0" FirstPageSource="1" OtherPagesSource="1" FinishPageEvent="Page1_FinishPage">
+    <PageHeaderBand Name="PageHeader1" Width="219.24" Height="151.2">
+      <TextObject Name="Text1" Width="219.24" Height="28.35" Text="[company]" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 11pt, style=Bold"/>
+      <TextObject Name="Text2" Top="28.35" Width="219.24" Height="18.9" Text="------收费小票清单------" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text3" Left="18.9" Top="56.7" Width="66.15" Height="18.9" Text="流水单号：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text4" Left="18.9" Top="75.6" Width="66.15" Height="18.9" Text="病历号：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text5" Left="18.9" Top="94.5" Width="66.15" Height="18.9" Text="患者姓名：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text6" Top="113.4" Width="219.24" Height="9.45" Text="----------------------------" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text7" Top="122.85" Width="219.24" Height="9.45" Text="----------------------------" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text30" Left="85.05" Top="56.7" Width="132.3" Height="18.9" CanGrow="true" Text="[seeDoctoeNumber]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text31" Left="85.05" Top="75.6" Width="132.3" Height="18.9" CanGrow="true" Text="[cardNum]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text32" Left="85.05" Top="94.5" Width="132.3" Height="18.9" CanGrow="true" Text="[patientName]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text12" Left="179.55" Top="132.3" Width="28.35" Height="18.9" Text="数量" VertAlign="Bottom" Font="宋体, 7pt"/>
+      <TextObject Name="Text11" Left="18.9" Top="132.3" Width="85.05" Height="18.9" Text="项目名称" VertAlign="Bottom" Font="宋体, 7pt"/>
+      <TextObject Name="Text9" Left="141.75" Top="132.3" Width="28.35" Height="18.9" Text="单价" VertAlign="Bottom" Font="宋体, 7pt"/>
+      <TextObject Name="Text13" Left="113.4" Top="132.3" Width="28.35" Height="18.9" Text="单位" VertAlign="Bottom" Font="宋体, 7pt"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="155.77" Width="219.24" Height="18.9" CanGrow="true" DataSource="list">
+      <TextObject Name="Text14" Left="18.9" Width="85.05" Height="18.9" CanGrow="true" Text="[list.str1]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text15" Left="113.4" Width="28.35" Height="18.9" CanGrow="true" AfterDataEvent="Text15_AfterData" Text="[list.str2]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text16" Left="141.75" Width="28.35" Height="18.9" CanGrow="true" Text="[list.str3]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text17" Left="179.55" Width="28.35" Height="18.9" CanGrow="true" Text="[list.str4]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <DataHeaderBand Name="DataHeader1" Top="153.49" Width="219.24"/>
+      <DataFooterBand Name="DataFooter1" Top="176.96" Width="219.24"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="179.24" Width="219.24" Height="170.1">
+      <TextObject Name="Text29" Top="151.2" Width="219.24" Height="18.9" Text="祝君早日康复！！！" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text28" Left="18.9" Top="132.3" Width="66.15" Height="18.9" Text="健康热线：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text39" Left="85.05" Top="132.3" Width="132.3" Height="18.9" CanGrow="true" Text="[phone]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text27" Left="18.9" Top="113.4" Width="66.15" Height="18.9" Text="打印时间：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text38" Left="85.05" Top="113.4" Width="132.3" Height="18.9" CanGrow="true" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text26" Left="18.9" Top="94.5" Width="66.15" Height="18.9" Text="收银员：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text37" Left="85.05" Top="94.5" Width="132.3" Height="18.9" CanGrow="true" Text="[userDataName]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text24" Top="85.05" Width="219.24" Height="9.45" Text="----------------------------" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text23" Top="75.6" Width="219.24" Height="9.45" Text="----------------------------" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text22" Left="18.9" Top="56.7" Width="66.15" Height="18.9" Text="支付方式：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text36" Left="85.05" Top="56.7" Width="132.3" Height="18.9" CanGrow="true" Text="[payType]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text21" Left="18.9" Top="37.8" Width="66.15" Height="18.9" Text="实付金额：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text35" Left="85.05" Top="37.8" Width="132.3" Height="18.9" CanGrow="true" Text="[relPay]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text20" Left="18.9" Top="18.9" Width="66.15" Height="18.9" Text="优惠金额：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text34" Left="85.05" Top="18.9" Width="132.3" Height="18.9" CanGrow="true" Text="[pa]" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text18" Width="219.24" Height="9.45" Text="----------------------------" HorzAlign="Center" VertAlign="Bottom" Font="宋体, 10pt"/>
+      <TextObject Name="Text19" Left="18.9" Width="66.15" Height="18.9" Text="消费总额：" VertAlign="Bottom" Font="宋体, 8pt"/>
+      <TextObject Name="Text33" Left="85.05" Width="132.3" Height="18.9" CanGrow="true" Text="[heji]" VertAlign="Bottom" Font="宋体, 8pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>

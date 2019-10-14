@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="08/26/2019 18:11:50" ReportInfo.Modified="10/12/2019 22:22:47" ReportInfo.CreatorVersion="2013.2.5.0">
+  <ScriptText>using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Data;
+using FastReport;
+using FastReport.Data;
+using FastReport.Dialog;
+using FastReport.Barcode;
+using FastReport.Table;
+using FastReport.Utils;
+
+namespace FastReport
+{
+  public class ReportScript
+  {
+   
+
+    private void Text1_AfterData(object sender, EventArgs e)
+    {
+      MessageBox.Show(Units.Millimeters.ToString());
+  
+    }
+
+    private void Page1_StartPage(object sender, EventArgs e)
+    {
+    }
+
+   
+  }
+  
+}
+</ScriptText>
+  <Dictionary>
+    <Parameter Name="Parameter" DataType="System.String" Expression="&quot;大是大非&quot;"/>
+  </Dictionary>
+  <ReportPage Name="Page1" PaperWidth="140" PaperHeight="90" StartPageEvent="Page1_StartPage" FinishPageEvent="Page1_FinishPage">
+    <ReportTitleBand Name="ReportTitle1" Width="453.6" Height="94.5">
+      <TextObject Name="Text2" Left="75.6" Top="18.9" Width="94.5" Height="18.9" AfterDataEvent="Text1_AfterData" Text="[Parameter]" Font="宋体, 9pt"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="98.5" Width="453.6" Height="28.35"/>
+    <DataBand Name="Data1" Top="130.85" Width="453.6" Height="132.3">
+      <TextObject Name="Text3" Left="103.95" Top="28.35" Width="94.5" Height="18.9" AfterDataEvent="Text1_AfterData" Text="[Parameter]" Font="宋体, 9pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="267.15" Width="453.6" Height="28.35">
+      <TextObject Name="Text1" Left="103.95" Top="9.45" Width="94.5" Height="18.9" AfterDataEvent="Text1_AfterData" Text="[Parameter]" Font="宋体, 9pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
